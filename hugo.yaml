@@ -1,6 +1,5 @@
 baseURL: "/"
 title: ExampleSite
-relativeURLs: true
 
 pagination:
   disableAliases: false
