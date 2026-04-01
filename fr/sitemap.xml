@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://adityatelange.github.io/hugo-PaperMod/fr/frcategories/</loc>
+    <loc>/fr/frcategories/</loc>
   </url><url>
-    <loc>https://adityatelange.github.io/hugo-PaperMod/fr/frseries/</loc>
+    <loc>/fr/frseries/</loc>
   </url><url>
-    <loc>https://adityatelange.github.io/hugo-PaperMod/fr/frtags/</loc>
+    <loc>/fr/frtags/</loc>
   </url><url>
-    <loc>https://adityatelange.github.io/hugo-PaperMod/fr/</loc>
+    <loc>/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://adityatelange.github.io/hugo-PaperMod/"
+                href="/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fa"
-                href="https://adityatelange.github.io/hugo-PaperMod/fa/"
+                href="/fa/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://adityatelange.github.io/hugo-PaperMod/fr/"
+                href="/fr/"
                 />
   </url>
 </urlset>

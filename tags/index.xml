@@ -2,58 +2,58 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on PaperMod</title>
-    <link>https://adityatelange.github.io/hugo-PaperMod/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on PaperMod</description>
     <image>
       <title>PaperMod</title>
-      <url>https://adityatelange.github.io/hugo-PaperMod/images/papermod-cover.png</url>
-      <link>https://adityatelange.github.io/hugo-PaperMod/images/papermod-cover.png</link>
+      <url>/images/papermod-cover.png</url>
+      <link>/images/papermod-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>PaperMod Contributors</copyright>
     <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://adityatelange.github.io/hugo-PaperMod/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Adguard</title>
-      <link>https://adityatelange.github.io/hugo-PaperMod/tags/adguard/</link>
+      <link>/tags/adguard/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://adityatelange.github.io/hugo-PaperMod/tags/adguard/</guid>
+      <guid>/tags/adguard/</guid>
       <description></description>
     </item>
     <item>
       <title>Dns</title>
-      <link>https://adityatelange.github.io/hugo-PaperMod/tags/dns/</link>
+      <link>/tags/dns/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://adityatelange.github.io/hugo-PaperMod/tags/dns/</guid>
+      <guid>/tags/dns/</guid>
       <description></description>
     </item>
     <item>
       <title>Homelab</title>
-      <link>https://adityatelange.github.io/hugo-PaperMod/tags/homelab/</link>
+      <link>/tags/homelab/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://adityatelange.github.io/hugo-PaperMod/tags/homelab/</guid>
+      <guid>/tags/homelab/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>https://adityatelange.github.io/hugo-PaperMod/tags/linux/</link>
+      <link>/tags/linux/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://adityatelange.github.io/hugo-PaperMod/tags/linux/</guid>
+      <guid>/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Networking</title>
-      <link>https://adityatelange.github.io/hugo-PaperMod/tags/networking/</link>
+      <link>/tags/networking/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://adityatelange.github.io/hugo-PaperMod/tags/networking/</guid>
+      <guid>/tags/networking/</guid>
       <description></description>
     </item>
     <item>
       <title>Proxmox</title>
-      <link>https://adityatelange.github.io/hugo-PaperMod/tags/proxmox/</link>
+      <link>/tags/proxmox/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://adityatelange.github.io/hugo-PaperMod/tags/proxmox/</guid>
+      <guid>/tags/proxmox/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,5 +1,5 @@
 # PaperMod
 
 ## Posts
-- [AdGuard setup for blocking ads](https://adityatelange.github.io/hugo-PaperMod/posts/hello-1/)
-- [AdGuard setup for blocking ads](https://adityatelange.github.io/hugo-PaperMod/posts/hello/)
+- [AdGuard setup for blocking ads](/posts/hello-1/)
+- [AdGuard setup for blocking ads](/posts/hello/)
