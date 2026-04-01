@@ -35,6 +35,12 @@
     <loc>/tags/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/about/</loc>
+  </url><url>
+    <loc>/archives/</loc>
+  </url><url>
     <loc>/categories/</loc>
+  </url><url>
+    <loc>/search/</loc>
   </url>
 </urlset>
