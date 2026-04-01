@@ -1,5 +1,7 @@
-baseURL: "https://examplesite.com/"
+baseURL: "/"
 title: ExampleSite
+relativeURLs: true
+canonifyURLs: true
 pagination:
   disableAliases: false
   pagerSize: 5
