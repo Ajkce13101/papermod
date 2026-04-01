@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Linux on ExampleSite</title>
+    <link>https://examplesite.com/tags/linux/</link>
+    <description>Recent content in Linux on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://examplesite.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://examplesite.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AdGuard setup for blocking ads</title>
+      <link>https://examplesite.com/posts/hello/</link>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://examplesite.com/posts/hello/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this post, I will show how I deployed &lt;strong&gt;AdGuard Home&lt;/strong&gt; in my home lab environment to achieve network-wide ad-blocking and DNS-level filtering. My homelab runs on &lt;strong&gt;Proxmox&lt;/strong&gt;, with AdGuard Home inside a &lt;strong&gt;Docker container&lt;/strong&gt; on a Linux virtual machine.&lt;/p&gt;
+&lt;p&gt;This setup allows all devices on my network to benefit from ad-blocking, tracking protection, and enhanced DNS management without installing software individually on each device.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-adguard-home&#34;&gt;Why AdGuard Home?&lt;/h2&gt;
+&lt;p&gt;AdGuard Home is an open-source, self-hosted network-wide ad-blocker and DNS resolver. Its key benefits include:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
