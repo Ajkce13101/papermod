@@ -1,5 +1,5 @@
 # Ajaya
-- [](/about/)
+- [About Me](/about/)
 
 ## Posts
 - [AdGuard setup for blocking ads](/posts/hello-1/)
