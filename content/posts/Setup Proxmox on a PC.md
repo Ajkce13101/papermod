@@ -12,7 +12,7 @@ categories:
 description: A step-by-step guide on installing and configuring Proxmox VE on an old Dell OptiPlex to build a powerful homelab.
 ---
 
-# 🚀 Setting Up Proxmox VE on an Old Dell OptiPlex
+# 🚀 Introduction
 
 Repurposing old hardware is one of the best ways to get started with a homelab. In this guide, I’ll walk you through how I installed **Proxmox Virtual Environment (VE)** on an old Dell OptiPlex and turned it into a powerful virtualization server.
 
