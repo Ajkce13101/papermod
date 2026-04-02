@@ -24,6 +24,10 @@ pagination:
 
 menu:
   main:
+    - identifier: about
+      name: About Me
+      url: /about/
+      weight: 5
     - identifier: archives
       name: Archives
       url: /archives/
@@ -47,14 +51,14 @@ outputFormats:
 outputs:
   home:
     - HTML
-    - RSS
     - JSON
     - llms
+    - RSS
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-  author: Theme PaperMod
+  author: Ajaya K C
+
   # author: ["Me", "You"] # multiple authors
 
   defaultTheme: auto
@@ -66,7 +70,7 @@ params:
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
-  ShowRssButtonInSectionTermList: true
+  ShowRssButtonInSectionTermList: false
   ShowAllPagesInArchive: true
   ShowPageNums: true
   ShowToc: true
@@ -90,27 +94,16 @@ params:
     Title: "Hello there 👋 "
     Content: >
       Hi, I’m Ajaya K C — an IT and networking enthusiast building and breaking things in my homelab.
-
-      This blog is where I document everything I learn: network setups, self-hosted services, Linux configs, firewalls, and anything else I experiment with.
+      This blog is where I document everything I learn: network setups, self-hosted services, Linux configs, firewalls, and anything else I experiment with.<br><br>
+      Got questions or want to connect? Reach out at aj@ajayakc.com — I’m always learning.
 
   socialIcons:
     - name: github
       title: View Source on Github
-      url: "https://github.com/adityatelange/hugo-PaperMod"
-    - name: Discord
-      title: Join discord community
-      url: "https://discord.gg/ahpmTvhVmp"
-    - name: X
-      title: Share PaperMod on X/Twitter
-      url: "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
-    - name: KoFi
-      title: Buy me a Ko-Fi :)
-      url: "https://ko-fi.com/adityatelange"
-
-  editPost:
-    URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+      url: "https://github.com/Ajkce13101/papermod"
+    - name: linkedin
+      title: Connect with me on LinkedIn
+      url: "https://www.linkedin.com/in/ajkce"
 
   # label:
   # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'

@@ -1,5 +1,12 @@
-+++
-+++
+---
+title: "About Me"
+showtoc: false
+ShowShareButtons: true
+ShowReadingTime: false
+ShowAuthor: false
+hidemeta: true
+
+---
 
 # Hi there
 

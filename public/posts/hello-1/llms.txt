@@ -1,0 +1,6 @@
+# Ajaya
+- [](//localhost:1313/about/)
+
+## Posts
+- [AdGuard setup for blocking ads](//localhost:1313/posts/hello-1/)
+- [AdGuard setup for blocking ads](//localhost:1313/posts/hello/)
