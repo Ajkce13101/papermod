@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Categories on Ajaya</title>
-    <link>/categories/</link>
-    <description>Recent content in Categories on Ajaya</description>
+    <title>Homelab on Ajaya</title>
+    <link>/categories/homelab/</link>
+    <description>Recent content in Homelab on Ajaya</description>
     <image>
       <title>Ajaya</title>
       <url>/images/papermod-cover.png</url>
@@ -13,20 +13,13 @@
     <language>en</language>
     <copyright>2024 Ajaya K C. All rights reserved.</copyright>
     <lastBuildDate>Thu, 02 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/homelab/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Homelab</title>
-      <link>/categories/homelab/</link>
+      <title>Setting Up Proxmox VE on an Old Dell OptiPlex</title>
+      <link>/posts/setup-proxmox-on-a-pc/</link>
       <pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>/categories/homelab/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Virtualization</title>
-      <link>/categories/virtualization/</link>
-      <pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>/categories/virtualization/</guid>
-      <description></description>
+      <guid>/posts/setup-proxmox-on-a-pc/</guid>
+      <description>A step-by-step guide on installing and configuring Proxmox VE on an old Dell OptiPlex to build a powerful homelab.</description>
     </item>
   </channel>
 </rss>
