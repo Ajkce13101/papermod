@@ -49,7 +49,7 @@ I have used rufus to create table drive for me
 2. Select Proxmox ISO
 3. Flash the image
 4. Safely eject the USB
-!![Image Description](/images/rufus.png)
+![Image Description](/images/rufus.png)
 
 
 ---
@@ -107,7 +107,7 @@ Once Proxmox is running on your server you need to go to another computer, open 
 	username:'root'
 	password:(the one you have set)
 	```
-!![Image Description](/images/porxmoxlogin.png)
+![Image Description](/images/porxmoxlogin.png)
 
 ## 📦 Step 8: Creating Your First VM
 
@@ -116,7 +116,7 @@ Now that you logged in to the Proxmox web console, follow these steps to create 
 1. Make sure you have ISO images for installation mediums. Move to the resource tree on the left side of your GUI.
 
 Select the server you are running and click on **local (pve1)**. Select **ISO Images** from the menu and choose between uploading an image or downloading it from a URL.
-!![Image Description](/images/disks.png)
+![Image Description](/images/disks.png)
 2. Once you have added an ISO image, spin up a virtual machine. Click the **Create VM** button.
 3. Provide general information about the VM.
 - Start by selecting the **Node**. If you are starting and have no nodes yet, Proxmox automatically selects node 1 (**pve1**).
@@ -142,7 +142,7 @@ Steps to create a LXC container on proxmox are:
 2. Click **Create CT**
 3. Configure resources such as storage, CPU configuration and Memory Configuration
 4. Review your settings and click **Finish**
-!![Image Description](/images/LXCContainer.png)
+![Image Description](/images/LXCContainer.png)
 
 
 ## 📚 What You Can Do Next
