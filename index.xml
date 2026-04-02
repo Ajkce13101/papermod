@@ -43,17 +43,17 @@
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/about/</guid>
-      <description>&lt;h1 id=&#34;hi-there&#34;&gt;Hi there&lt;/h1&gt;
+      <description>&lt;h3 id=&#34;hi-there&#34;&gt;Hi there&lt;/h3&gt;
 &lt;p&gt;Hi, I’m Ajaya K C — an IT and networking enthusiast building and breaking things in my homelab.&lt;/p&gt;
 &lt;p&gt;This blog is where I document everything I learn: network setups, self-hosted services, Linux configs, firewalls, and anything else I experiment with.&lt;/p&gt;
-&lt;h1 id=&#34;what-youll-find-here&#34;&gt;What you&amp;rsquo;ll find here&lt;/h1&gt;
+&lt;h3 id=&#34;what-youll-find-here&#34;&gt;What you&amp;rsquo;ll find here&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Step-by-step homelab tutorials with real screenshots&lt;/li&gt;
 &lt;li&gt;Networking deep-dives (Linux, VLANs, DNS, VPNs)&lt;/li&gt;
 &lt;li&gt;Self-hosted app setups (Proxmox, Docker)&lt;/li&gt;
 &lt;li&gt;IT study notes and certification prep&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;my-setup&#34;&gt;My Setup&lt;/h1&gt;
+&lt;h3 id=&#34;my-setup&#34;&gt;My Setup&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Hypervisor: Proxmox&lt;/li&gt;
 &lt;li&gt;DNS: Adguard Home&lt;/li&gt;
@@ -62,7 +62,7 @@
 &lt;li&gt;Cloud: Oracle Linux&lt;/li&gt;
 &lt;li&gt;RMM: Meshcentral&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;connect&#34;&gt;Connect&lt;/h1&gt;
+&lt;h3 id=&#34;connect&#34;&gt;Connect&lt;/h3&gt;
 &lt;p&gt;Got questions or found an error? Reach out at &lt;a href=&#34;mailto:aj@ajayakc.com&#34;&gt;aj@ajayakc.com&lt;/a&gt; — I’m always learning.&lt;/p&gt;</description>
     </item>
   </channel>
