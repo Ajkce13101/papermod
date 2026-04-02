@@ -2,22 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/</loc>
+    <lastmod>2026-04-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2026-04-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/homelab/</loc>
+    <lastmod>2026-04-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/homelab/</loc>
+    <lastmod>2026-04-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2026-04-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/proxmox/</loc>
+    <lastmod>2026-04-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/setup-proxmox-on-a-pc/</loc>
+    <lastmod>2026-04-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2026-04-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/virtualization/</loc>
+    <lastmod>2026-04-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/virtualization/</loc>
+    <lastmod>2026-04-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/adguard/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/adguard-setup-on-homelab/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/hello-1/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/dns/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/homelab/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/linux/</loc>
@@ -26,20 +47,9 @@
     <loc>/tags/networking/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/proxmox/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/about/</loc>
   </url><url>
     <loc>/archives/</loc>
-  </url><url>
-    <loc>/categories/</loc>
   </url><url>
     <loc>/search/</loc>
   </url>
