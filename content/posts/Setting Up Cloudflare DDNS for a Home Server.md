@@ -44,58 +44,68 @@ In Cloudflare:
 1. Navigate to **DNS**.
 2. Create an **A Record**.
 !![Image Description](/images/aRecord.png)
+The IP address is only temporary and will be updated automatically later.
 
-## Step 2: Create a Docker Compose File for AdGuard Home
-On the Linux VM, create a directory for AdGuard Home:
-```bash
-mkdir -p ~/adguard && cd ~/adguard
-```
+## Step 2: Create a Cloudflare API Token
+Navigate to:
 
-Create docker-compose.yml:
-```yaml
-version: "3"
+**My Profile → API Tokens → Create Token**
 
-services:
-  adguardhome:
-    container_name: adguardhome
-    image: adguard/adguardhome:latest
-    restart: unless-stopped
-    ports:
-      - "53:53/tcp"
-      - "53:53/udp"
-      - "80:80/tcp"
-      - "443:443/tcp"
-      - "3000:3000/tcp" # optional admin port
+Use the **Edit Zone DNS** template.
 
-    volumes:
-      - ./workdir:/opt/adguardhome/work
-      - ./config:/opt/adguardhome/conf
+Grant permissions:
 
-    networks:
-      - adguard-net
-        
-networks:
-  adguard-net:
-    driver: bridge
-```
+- Zone → DNS → Edit
+- Zone → Zone → Read
+
+Limit the token to your specific domain.
+
+Save the token securely, as it will only be displayed once.
 
   
+## Step 3: Deploying Cloudflare DDNS with Docker Compose
+Since I already use Docker to manage services in my homelab, I chose to run Cloudflare DDNS as a container.
 
-## Step 3: Start AdGuard Home
-Run:
+First create the following directory
 ```bash
-docker-compose up -d
+mkdir ~/cloudflare-ddns 
+cd ~/cloudflare-ddns
 
 ```
 
-Check container logs:
+Create a `compose.yaml` file with your favorite text editor
 ```bash
-docker logs -f adguardhome
+nano compose.yaml
 ```
 
-Once started, the web UI is available at:
-```bash
-http://<vm-ip>:3000
+Now paste the following in the compose file
+```yaml
+services:
+  cloudflare-ddns:
+    image: favonia/cloudflare-ddns:latest
+    # Choose the appropriate tag based on your need:
+    # - "latest" for the latest stable version (which could become 2.x.y
+    #   in the future and break things)
+    # - "1" for the latest stable version whose major version is 1
+    # - "1.x.y" to pin the specific version 1.x.y
+    network_mode: host
+    # This bypasses network isolation and makes IPv6 easier (optional; see below)
+    restart: always
+    # Restart the updater after reboot
+    user: "1000:1000"
+    # Run the updater with specific user and group IDs (in that order).
+    # You can change the two numbers based on your need.
+    read_only: true
+    # Make the container filesystem read-only (optional but recommended)
+    cap_drop: [all]
+    # Drop all Linux capabilities (optional but recommended)
+    security_opt: [no-new-privileges:true]
+    # Another protection to restrict superuser privileges (optional but recommended)
+    environment:
+      - CLOUDFLARE_API_TOKEN="YOUR_CLOUDFLARE_API_TOKEN"
+        # Your Cloudflare API token
+      - DOMAINS=home.example.com
+        # Your domains (separated by commas)
 ```
 
 Follow the setup wizard to configure:
