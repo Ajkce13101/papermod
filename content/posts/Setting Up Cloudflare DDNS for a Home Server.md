@@ -135,7 +135,7 @@ docker logs -f cloudflare-ddns
 ```
 If everything is configured correctly, you'll see messages indicating that the updater has checked your public IP and updated Cloudflare if necessary.
 ```text
-Detected the IPv4 address 49.194.71.116
+Detected the IPv4 address 21.23.23.1
 
 🤷 The A records of home.example.com are already up to date (cached)
 
@@ -143,7 +143,7 @@ Detected the IPv4 address 49.194.71.116
 
 ⏰ Checking the IP addresses in about 4m55s . . .
 
-🌐 Detected the IPv4 address 49.194.71.116
+🌐 Detected the IPv4 address 21.23.23.1
 
 🤷 The A records of home.example.com are already up to date (cached)
 
