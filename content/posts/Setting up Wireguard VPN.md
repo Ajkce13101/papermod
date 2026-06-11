@@ -53,72 +53,112 @@ Now on the wireguard directory create a compose file with the text editor of you
 nano compose.yaml
 ```
 
-Create docker-compose.yml:
+Here is what the compose file should look like: 
 ```yaml
-version: "3"
-
 services:
-  adguardhome:
-    container_name: adguardhome
-    image: adguard/adguardhome:latest
-    restart: unless-stopped
-    ports:
-      - "53:53/tcp"
-      - "53:53/udp"
-      - "80:80/tcp"
-      - "443:443/tcp"
-      - "3000:3000/tcp" # optional admin port
-
-    volumes:
-      - ./workdir:/opt/adguardhome/work
-      - ./config:/opt/adguardhome/conf
-
-    networks:
-      - adguard-net
-        
-networks:
-  adguard-net:
-    driver: bridge
+  wireguard:
+    image: lscr.io/linuxserver/wireguard:latest
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE #optional
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - SERVERURL=auto #optional
+      - SERVERPORT=51820 #optional
+      - PEERS=peer1,peer2 #optional
+      - PEERDNS=1.1.1.2,1.0.0.2 #optional
+      - INTERNAL_SUBNET=10.13.13.0 #optional
+      - ALLOWEDIPS=0.0.0.0/0 #optional
+    volumes:
+      - /home/ajaya/wireguard:/config
+      - /lib/modules:/lib/modules #optional
+    ports:
+      - 51820:51820/udp
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    restart: unless-stopped
 ```
 
   
 
-## Step 3: Start AdGuard Home
+## Step 3: Start the server
 Run:
 ```bash
 docker-compose up -d
 
 ```
 
-Check container logs:
+Verify if it is running:
 ```bash
-docker logs -f adguardhome
+docker ps
+```
+You should see the wireguard container is listed
+
+
+
+## Step 4: Retrieve Client Configurations
+The LinuxServer image automatically generates client configurations.
+
+List generated peer files:
+```bash
+ls config/peer1/
 ```
 
-Once started, the web UI is available at:
+Display the client configuration:
 ```bash
-http://<vm-ip>:3000
+cat config/peer/peer1/peer1.config
 ```
 
-Follow the setup wizard to configure:
-- Admin credentials
-- Upstream DNS servers (e.g., Cloudflare, Google, or Quad9)
-- DHCP/DNS integration (optional)
-- Blocklists (AdGuard defaults or custom lists)
+You should see something like this:
+```bash
+[Interface]
+PrivateKey = CLIENT_PRIVATE_KEY 
+Address = 10.13.13.2/32 
+DNS = 1.1.1.1 
+
+[Peer] 
+PublicKey = SERVER_PUBLIC_KEY 
+Endpoint = your-domain.example.com:51820 
+AllowedIPs = 0.0.0.0/0 
+PersistentKeepalive = 25
+```
+
+## Generate a QR Code
+For mobile devices, importing via QR code is much easier.
+
+Generate a QR code:
+```bash
+docker exec -it wireguard /app/show-peer 1
+```
+Open the WireGuard app and scan the displayed QR code.
 
 
-## Step 4: Configure Your Network to Use AdGuard
-To enable network-wide ad-blocking:
-1. Set the DNS on your home router to point to your Linux VM IP.
-2. Some routers might not allow you to setup custom DNS server, alternatively, configure individual devices to use the VM’s DNS.
-This way, all devices on your network automatically benefit from AdGuard’s filtering.
+## Configure Port Forwarding
+On your router, forward:
+```bash
+UDP 51820
+```
+to the internal IP address of your Docker host.
 
-![Image Description](/images/adguard.png)
-## Conclusion
-Running AdGuard Home in a Docker container inside a Linux VM on Proxmox gives you a robust, network-wide DNS-level ad-blocker. It’s lightweight, self-contained, and fully customizable, making it perfect for a homelab environment.
+Without port forwarding, clients outside your network will not be able to connect
 
-This setup allows me to:
-- Block ads and trackers across all devices
-- Manage DNS centrally
-- Easily maintain and update via Docker
-- Integrate with other homelab services like WireGuard and MeshCentral
+
+## Testing the VPN
+Connect using your WireGuard client and verify connectivity:
+
+Check your public IP:
+```bash
+curl ifconfig.me
+```
+The returned IP should match your home network or VPS.
+
+
+## Final Thoughts
+Using Docker dramatically simplifies the deployment of WireGuard. With only a single Compose file, you can quickly build a secure VPN solution for remote access, homelab management, or protecting your traffic while travelling.
+
+WireGuard's lightweight design and excellent performance make it one of the best self-hosted VPN solutions available today. Combined with Docker, maintaining and updating your VPN server becomes almost effortless.
+
+Happy self-hosting!
