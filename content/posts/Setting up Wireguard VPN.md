@@ -12,7 +12,7 @@ tags:
 ## Introduction
 WireGuard has quickly become one of the most popular VPN solutions thanks to its simplicity, speed, and modern cryptography. Running it inside Docker makes deployment and maintenance even easier.
 
-In this guide, we'll set up a WireGuard VPN server using Docker and Docker Compose.
+In this guide, we'll set up a WireGuard VPN server using Docker Compose.
 
 ---
 ## Prerequisites

@@ -9,7 +9,7 @@
 <meta name="keywords" content="networking, wireguard, vpn, docker, linux">
 <meta name="description" content="Introduction
 WireGuard has quickly become one of the most popular VPN solutions thanks to its simplicity, speed, and modern cryptography. Running it inside Docker makes deployment and maintenance even easier.
-In this guide, we&rsquo;ll set up a WireGuard VPN server using Docker and Docker Compose.
+In this guide, we&rsquo;ll set up a WireGuard VPN server using Docker Compose.
 
 Prerequisites
 Before you begin, ensure you have:
@@ -49,7 +49,7 @@ You can verify Docker is installed:">
   <meta property="og:site_name" content="Ajaya">
   <meta property="og:title" content="Setting up wireguard vpn server with docker">
   <meta property="og:description" content="Introduction WireGuard has quickly become one of the most popular VPN solutions thanks to its simplicity, speed, and modern cryptography. Running it inside Docker makes deployment and maintenance even easier.
-In this guide, we’ll set up a WireGuard VPN server using Docker and Docker Compose.
+In this guide, we’ll set up a WireGuard VPN server using Docker Compose.
 Prerequisites Before you begin, ensure you have:
 A Linux server or VPS Docker installed Docker Compose installed A public IP address or Dynamic DNS hostname You can verify Docker is installed:">
   <meta property="og:locale" content="en">
@@ -68,7 +68,7 @@ A Linux server or VPS Docker installed Docker Compose installed A public IP addr
   <meta name="twitter:image" content="//localhost:1313/images/papermod-cover.png">
   <meta name="twitter:title" content="Setting up wireguard vpn server with docker">
   <meta name="twitter:description" content="Introduction WireGuard has quickly become one of the most popular VPN solutions thanks to its simplicity, speed, and modern cryptography. Running it inside Docker makes deployment and maintenance even easier.
-In this guide, we’ll set up a WireGuard VPN server using Docker and Docker Compose.
+In this guide, we’ll set up a WireGuard VPN server using Docker Compose.
 Prerequisites Before you begin, ensure you have:
 A Linux server or VPS Docker installed Docker Compose installed A public IP address or Dynamic DNS hostname You can verify Docker is installed:">
 
@@ -99,12 +99,12 @@ A Linux server or VPS Docker installed Docker Compose installed A public IP addr
   "@type": "BlogPosting",
   "headline": "Setting up wireguard vpn server with docker",
   "name": "Setting up wireguard vpn server with docker",
-  "description": "Introduction WireGuard has quickly become one of the most popular VPN solutions thanks to its simplicity, speed, and modern cryptography. Running it inside Docker makes deployment and maintenance even easier.\nIn this guide, we\u0026rsquo;ll set up a WireGuard VPN server using Docker and Docker Compose.\nPrerequisites Before you begin, ensure you have:\nA Linux server or VPS Docker installed Docker Compose installed A public IP address or Dynamic DNS hostname You can verify Docker is installed:\n",
+  "description": "Introduction WireGuard has quickly become one of the most popular VPN solutions thanks to its simplicity, speed, and modern cryptography. Running it inside Docker makes deployment and maintenance even easier.\nIn this guide, we\u0026rsquo;ll set up a WireGuard VPN server using Docker Compose.\nPrerequisites Before you begin, ensure you have:\nA Linux server or VPS Docker installed Docker Compose installed A public IP address or Dynamic DNS hostname You can verify Docker is installed:\n",
   "keywords": [
     "networking", "wireguard", "vpn", "docker", "linux"
   ],
-  "articleBody": "Introduction WireGuard has quickly become one of the most popular VPN solutions thanks to its simplicity, speed, and modern cryptography. Running it inside Docker makes deployment and maintenance even easier.\nIn this guide, we’ll set up a WireGuard VPN server using Docker and Docker Compose.\nPrerequisites Before you begin, ensure you have:\nA Linux server or VPS Docker installed Docker Compose installed A public IP address or Dynamic DNS hostname You can verify Docker is installed:\ndocker --version docker compose version Homelab Environment Here’s my setup:\nProxmox VE: Virtualization host for all lab VMs and containers Linux VM: Debian/Ubuntu virtual machine running Docker Docker with Docker compose: For ease of starting up container and shutting down with docker compose Network: Static IP assigned to the VM, integrated with home router for DNS resolution Step 1: Create a docker-compose file It is a good idea to place it in a separate directory. So lets create a following directory for our wireguard setup\nmkdir ~/wireguard cd ~/wireguard Step 2: Create a Docker Compose File for Wireguard Now on the wireguard directory create a compose file with the text editor of your choice. Here I have used nano\nnano compose.yaml Here is what the compose file should look like:\nservices: wireguard: image: lscr.io/linuxserver/wireguard:latest container_name: wireguard cap_add: - NET_ADMIN - SYS_MODULE #optional environment: - PUID=1000 - PGID=1000 - TZ=Etc/UTC - SERVERURL=auto #optional - SERVERPORT=51820 #optional - PEERS=peer1,peer2 #optional - PEERDNS=1.1.1.2,1.0.0.2 #optional - INTERNAL_SUBNET=10.13.13.0 #optional - ALLOWEDIPS=0.0.0.0/0 #optional volumes: - /home/ajaya/wireguard:/config - /lib/modules:/lib/modules #optional ports: - 51820:51820/udp sysctls: - net.ipv4.conf.all.src_valid_mark=1 restart: unless-stopped Step 3: Start the server Run:\ndocker-compose up -d Verify if it is running:\ndocker ps You should see the wireguard container is listed\nStep 4: Retrieve Client Configurations The LinuxServer image automatically generates client configurations.\nList generated peer files:\nls config/peer1/ Display the client configuration:\ncat config/peer/peer1/peer1.config You should see something like this:\n[Interface] PrivateKey = CLIENT_PRIVATE_KEY Address = 10.13.13.2/32 DNS = 1.1.1.1 [Peer] PublicKey = SERVER_PUBLIC_KEY Endpoint = your-domain.example.com:51820 AllowedIPs = 0.0.0.0/0 PersistentKeepalive = 25 Generate a QR Code For mobile devices, importing via QR code is much easier.\nGenerate a QR code:\ndocker exec -it wireguard /app/show-peer 1 Open the WireGuard app and scan the displayed QR code.\nConfigure Port Forwarding On your router, forward:\nUDP 51820 to the internal IP address of your Docker host.\nWithout port forwarding, clients outside your network will not be able to connect\nTesting the VPN Connect using your WireGuard client and verify connectivity:\nCheck your public IP:\ncurl ifconfig.me The returned IP should match your home network or VPS.\nFinal Thoughts Using Docker dramatically simplifies the deployment of WireGuard. With only a single Compose file, you can quickly build a secure VPN solution for remote access, homelab management, or protecting your traffic while travelling.\nWireGuard’s lightweight design and excellent performance make it one of the best self-hosted VPN solutions available today. Combined with Docker, maintaining and updating your VPN server becomes almost effortless.\nHappy self-hosting!\n",
-  "wordCount" : "492",
+  "articleBody": "Introduction WireGuard has quickly become one of the most popular VPN solutions thanks to its simplicity, speed, and modern cryptography. Running it inside Docker makes deployment and maintenance even easier.\nIn this guide, we’ll set up a WireGuard VPN server using Docker Compose.\nPrerequisites Before you begin, ensure you have:\nA Linux server or VPS Docker installed Docker Compose installed A public IP address or Dynamic DNS hostname You can verify Docker is installed:\ndocker --version docker compose version Homelab Environment Here’s my setup:\nProxmox VE: Virtualization host for all lab VMs and containers Linux VM: Debian/Ubuntu virtual machine running Docker Docker with Docker compose: For ease of starting up container and shutting down with docker compose Network: Static IP assigned to the VM, integrated with home router for DNS resolution Step 1: Create a docker-compose file It is a good idea to place it in a separate directory. So lets create a following directory for our wireguard setup\nmkdir ~/wireguard cd ~/wireguard Step 2: Create a Docker Compose File for Wireguard Now on the wireguard directory create a compose file with the text editor of your choice. Here I have used nano\nnano compose.yaml Here is what the compose file should look like:\nservices: wireguard: image: lscr.io/linuxserver/wireguard:latest container_name: wireguard cap_add: - NET_ADMIN - SYS_MODULE #optional environment: - PUID=1000 - PGID=1000 - TZ=Etc/UTC - SERVERURL=auto #optional - SERVERPORT=51820 #optional - PEERS=peer1,peer2 #optional - PEERDNS=1.1.1.2,1.0.0.2 #optional - INTERNAL_SUBNET=10.13.13.0 #optional - ALLOWEDIPS=0.0.0.0/0 #optional volumes: - /home/ajaya/wireguard:/config - /lib/modules:/lib/modules #optional ports: - 51820:51820/udp sysctls: - net.ipv4.conf.all.src_valid_mark=1 restart: unless-stopped Step 3: Start the server Run:\ndocker-compose up -d Verify if it is running:\ndocker ps You should see the wireguard container is listed\nStep 4: Retrieve Client Configurations The LinuxServer image automatically generates client configurations.\nList generated peer files:\nls config/peer1/ Display the client configuration:\ncat config/peer/peer1/peer1.config You should see something like this:\n[Interface] PrivateKey = CLIENT_PRIVATE_KEY Address = 10.13.13.2/32 DNS = 1.1.1.1 [Peer] PublicKey = SERVER_PUBLIC_KEY Endpoint = your-domain.example.com:51820 AllowedIPs = 0.0.0.0/0 PersistentKeepalive = 25 Generate a QR Code For mobile devices, importing via QR code is much easier.\nGenerate a QR code:\ndocker exec -it wireguard /app/show-peer 1 Open the WireGuard app and scan the displayed QR code.\nConfigure Port Forwarding On your router, forward:\nUDP 51820 to the internal IP address of your Docker host.\nWithout port forwarding, clients outside your network will not be able to connect\nTesting the VPN Connect using your WireGuard client and verify connectivity:\nCheck your public IP:\ncurl ifconfig.me The returned IP should match your home network or VPS.\nFinal Thoughts Using Docker dramatically simplifies the deployment of WireGuard. With only a single Compose file, you can quickly build a secure VPN solution for remote access, homelab management, or protecting your traffic while travelling.\nWireGuard’s lightweight design and excellent performance make it one of the best self-hosted VPN solutions available today. Combined with Docker, maintaining and updating your VPN server becomes almost effortless.\nHappy self-hosting!�����������\n",
+  "wordCount" : "490",
   "inLanguage": "en",
   "image": "//localhost:1313/images/papermod-cover.png","datePublished": "2026-06-11T00:00:00Z",
   "dateModified": "2026-06-11T00:00:00Z",
@@ -228,7 +228,7 @@ A Linux server or VPS Docker installed Docker Compose installed A public IP addr
 
   <div class="post-content"><h2 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h2>
 <p>WireGuard has quickly become one of the most popular VPN solutions thanks to its simplicity, speed, and modern cryptography. Running it inside Docker makes deployment and maintenance even easier.</p>
-<p>In this guide, we&rsquo;ll set up a WireGuard VPN server using Docker and Docker Compose.</p>
+<p>In this guide, we&rsquo;ll set up a WireGuard VPN server using Docker Compose.</p>
 <hr>
 <h2 id="prerequisites">Prerequisites<a hidden class="anchor" aria-hidden="true" href="#prerequisites">#</a></h2>
 <p>Before you begin, ensure you have:</p>
@@ -325,7 +325,7 @@ A Linux server or VPS Docker installed Docker Compose installed A public IP addr
 <h2 id="final-thoughts">Final Thoughts<a hidden class="anchor" aria-hidden="true" href="#final-thoughts">#</a></h2>
 <p>Using Docker dramatically simplifies the deployment of WireGuard. With only a single Compose file, you can quickly build a secure VPN solution for remote access, homelab management, or protecting your traffic while travelling.</p>
 <p>WireGuard&rsquo;s lightweight design and excellent performance make it one of the best self-hosted VPN solutions available today. Combined with Docker, maintaining and updating your VPN server becomes almost effortless.</p>
-<p>Happy self-hosting!</p>
+<p>Happy self-hosting!�����������</p>
 
 
   </div>
@@ -525,4 +525,27 @@ A Linux server or VPS Docker installed Docker Compose installed A public IP addr
             range.selectNodeContents(codeblock);
             const selection = window.getSelection();
             selection.removeAllRanges();
-            selection.add
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

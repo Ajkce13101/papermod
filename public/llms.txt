@@ -4,4 +4,5 @@
 ## Posts
 - [Setting up wireguard vpn server with docker](//localhost:1313/posts/setting-up-wireguard-vpn/)
 - [Setting Up Proxmox VE on an Old Dell OptiPlex](//localhost:1313/posts/setup-proxmox-on-a-pc/)
-- [AdGuard setup for b
+- [AdGuard setup for blocking ads](//localhost:1313/posts/adguard-setup-on-homelab/)
+- [AdGuard setup for blocking ads](//localhost:1313/posts/setting-up-cloudflare-ddns-for-a-home-server/)
