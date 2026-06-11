@@ -1,14 +1,12 @@
 ---
-title: AdGuard setup for blocking ads
-date: 2026-04-01
+title: Setting Up Cloudflare DDNS for a Home Server
+date: 2026-06-12
 draft: false
 tags:
   - homelab
-  - networking
-  - adguard
-  - dns
-  - proxmox
-  - linux
+  - cloudflare
+  - dynamic dns
+
 ---
 ## Introduction
 Most residential internet connections use a dynamic public IP address. This means that your ISP can change your public IP at any time, making it difficult to access self-hosted services consistently.
