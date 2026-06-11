@@ -1,5 +1,5 @@
 ---
-title: AdGuard setup for blocking ads
+title: Setting up wireguard vpn server with docker
 date: 2026-04-01
 draft: false
 tags:
@@ -11,9 +11,9 @@ tags:
   - linux
 ---
 ## Introduction
-In this post, I will show how I deployed **AdGuard Home** in my home lab environment to achieve network-wide ad-blocking and DNS-level filtering. My homelab runs on **Proxmox**, with AdGuard Home inside a **Docker container** on a Linux virtual machine.
+WireGuard has quickly become one of the most popular VPN solutions thanks to its simplicity, speed, and modern cryptography. Running it inside Docker makes deployment and maintenance even easier.
 
-This setup allows all devices on my network to benefit from ad-blocking, tracking protection, and enhanced DNS management without installing software individually on each device.
+In this guide, we'll set up a WireGuard VPN server using Docker and Docker Compose.
 
 ---
 ## Why AdGuard Home?

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ajaya</title>
-    <link>/</link>
+    <link>//localhost:1313/</link>
     <description>Recent content on Ajaya</description>
     <image>
       <title>Ajaya</title>
-      <url>/images/papermod-cover.png</url>
-      <link>/images/papermod-cover.png</link>
+      <url>//localhost:1313/images/papermod-cover.png</url>
+      <link>//localhost:1313/images/papermod-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>2024 Ajaya K C. All rights reserved.</copyright>
     <lastBuildDate>Thu, 02 Apr 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting Up Proxmox VE on an Old Dell OptiPlex</title>
-      <link>/posts/setup-proxmox-on-a-pc/</link>
+      <link>//localhost:1313/posts/setup-proxmox-on-a-pc/</link>
       <pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>/posts/setup-proxmox-on-a-pc/</guid>
+      <guid>//localhost:1313/posts/setup-proxmox-on-a-pc/</guid>
       <description>A step-by-step guide on installing and configuring Proxmox VE on an old Dell OptiPlex to build a powerful homelab.</description>
     </item>
     <item>
       <title>AdGuard setup for blocking ads</title>
-      <link>/posts/adguard-setup-on-homelab/</link>
+      <link>//localhost:1313/posts/adguard-setup-on-homelab/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>/posts/adguard-setup-on-homelab/</guid>
+      <guid>//localhost:1313/posts/adguard-setup-on-homelab/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this post, I will show how I deployed &lt;strong&gt;AdGuard Home&lt;/strong&gt; in my home lab environment to achieve network-wide ad-blocking and DNS-level filtering. My homelab runs on &lt;strong&gt;Proxmox&lt;/strong&gt;, with AdGuard Home inside a &lt;strong&gt;Docker container&lt;/strong&gt; on a Linux virtual machine.&lt;/p&gt;
 &lt;p&gt;This setup allows all devices on my network to benefit from ad-blocking, tracking protection, and enhanced DNS management without installing software individually on each device.&lt;/p&gt;
@@ -34,22 +34,17 @@
 &lt;p&gt;AdGuard Home is an open-source, self-hosted network-wide ad-blocker and DNS resolver. Its key benefits include:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>AdGuard setup for blocking ads</title>
-      <link>/posts/setting-up-wireguard-vpn/</link>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>/posts/setting-up-wireguard-vpn/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this post, I will show how I deployed &lt;strong&gt;AdGuard Home&lt;/strong&gt; in my home lab environment to achieve network-wide ad-blocking and DNS-level filtering. My homelab runs on &lt;strong&gt;Proxmox&lt;/strong&gt;, with AdGuard Home inside a &lt;strong&gt;Docker container&lt;/strong&gt; on a Linux virtual machine.&lt;/p&gt;
-&lt;p&gt;This setup allows all devices on my network to benefit from ad-blocking, tracking protection, and enhanced DNS management without installing software individually on each device.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;why-adguard-home&#34;&gt;Why AdGuard Home?&lt;/h2&gt;
-&lt;p&gt;AdGuard Home is an open-source, self-hosted network-wide ad-blocker and DNS resolver. Its key benefits include:&lt;/p&gt;</description>
+      <title></title>
+      <link>//localhost:1313/posts/setting-up-wireguard-vpn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/setting-up-wireguard-vpn/</guid>
+      <description></description>
     </item>
     <item>
       <title>About Me</title>
-      <link>/about/</link>
+      <link>//localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/about/</guid>
+      <guid>//localhost:1313/about/</guid>
       <description>&lt;h3 id=&#34;hi-there&#34;&gt;Hi there&lt;/h3&gt;
 &lt;p&gt;Hi, I’m Ajaya K C — an IT and networking enthusiast building and breaking things in my homelab.&lt;/p&gt;
 &lt;p&gt;This blog is where I document everything I learn: network setups, self-hosted services, Linux configs, firewalls, and anything else I experiment with.&lt;/p&gt;
