@@ -16,38 +16,41 @@ WireGuard has quickly become one of the most popular VPN solutions thanks to its
 In this guide, we'll set up a WireGuard VPN server using Docker and Docker Compose.
 
 ---
-## Why AdGuard Home?
-AdGuard Home is an open-source, self-hosted network-wide ad-blocker and DNS resolver. Its key benefits include:
-- DNS-level ad-blocking for all devices
-- Filtering trackers and malicious domains
-- Lightweight and easy to deploy in containers
-- Web UI for management and monitoring
-- Integration with multiple upstream DNS providers
+## Prerequisites
+Before you begin, ensure you have:
+- A Linux server or VPS
+- Docker installed
+- Docker Compose installed
+- A public IP address or Dynamic DNS hostname
+
+You can verify Docker is installed:
+```bash
+docker --version
+docker compose version
+```
 
 ---
 ## Homelab Environment
 Here’s my setup:
 - **Proxmox VE**: Virtualization host for all lab VMs and containers
 - **Linux VM**: Debian/Ubuntu virtual machine running Docker
-- **Docker**: Containerized AdGuard Home deployment
+- **Docker with Docker compose**: For ease of starting up container and shutting down with docker compose
 - **Network**: Static IP assigned to the VM, integrated with home router for DNS resolution
 
 
 ---
-## Step 1: Prepare the Linux VM
-1. Provision a Linux VM in Proxmox (Debian or Ubuntu recommended).
+## Step 1: Create a docker-compose file
+It is a good idea to place it in a separate directory. So lets create a following directory for our wireguard setup
 
-2. Update the system and install Docker:
 ```bash
-sudo apt update && sudo apt upgrade -y
-sudo apt install docker.io docker-compose -y
-sudo systemctl enable docker --now
+mkdir ~/wireguard 
+cd ~/wireguard
 ```
 
-## Step 2: Create a Docker Compose File for AdGuard Home
-On the Linux VM, create a directory for AdGuard Home:
+## Step 2: Create a Docker Compose File for Wireguard
+Now on the wireguard directory create a compose file with the text editor of your choice. Here I have used nano
 ```bash
-mkdir -p ~/adguard && cd ~/adguard
+nano compose.yaml
 ```
 
 Create docker-compose.yml:
