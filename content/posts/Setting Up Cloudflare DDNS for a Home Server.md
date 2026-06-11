@@ -1,5 +1,5 @@
 ---
-title: Setting Up Cloudflare DDNS for a Home Server
+title: How I Got a Static Public Address for My Home Server Using Cloudflare DDNS
 date: 2026-06-12
 draft: false
 tags:
@@ -105,26 +105,92 @@ services:
       - DOMAINS=home.example.com
         # Your domains (separated by commas)
 ```
+Replace:
 
-Follow the setup wizard to configure:
-- Admin credentials
-- Upstream DNS servers (e.g., Cloudflare, Google, or Quad9)
-- DHCP/DNS integration (optional)
-- Blocklists (AdGuard defaults or custom lists)
+- `YOUR_CLOUDFLARE_API_TOKEN`
+- `home.example.com`
+with your own values and save the file
 
 
-## Step 4: Configure Your Network to Use AdGuard
-To enable network-wide ad-blocking:
-1. Set the DNS on your home router to point to your Linux VM IP.
-2. Some routers might not allow you to setup custom DNS server, alternatively, configure individual devices to use the VM’s DNS.
-This way, all devices on your network automatically benefit from AdGuard’s filtering.
 
-![Image Description](/images/adguard.png)
+## Step 4: Start the server
+Run:
+```bash
+docker-compose up -d
+
+```
+
+You should see the container start successfully.
+
+Verify that it is running:
+```bash
+docker ps
+```
+![[dockerpsddns.png|533]]
+## Step 4: Verify DNS Updates
+Check the container logs:
+```bash
+docker logs -f cloudflare-ddns
+```
+If everything is configured correctly, you'll see messages indicating that the updater has checked your public IP and updated Cloudflare if necessary.
+```text
+Detected the IPv4 address 49.194.71.116
+
+🤷 The A records of home.example.com are already up to date (cached)
+
+😞 Failed to detect the IPv6 address
+
+⏰ Checking the IP addresses in about 4m55s . . .
+
+🌐 Detected the IPv4 address 49.194.71.116
+
+🤷 The A records of home.example.com are already up to date (cached)
+
+😞 Failed to detect the IPv6 address
+
+⏰ Checking the IP addresses in about 4m55s . . .
+```
+
+You can also verify that your DNS record resolves correctly:
+
+Using dig:
+```bash
+dig home.example.com
+```
+
+Or using nslookup:
+```bash
+nslookup home.example.com
+```
+The returned IP should match your current public IP address.
+
+## How It Works
+The Cloudflare DDNS container periodically checks your public IP address.
+
+If your ISP assigns a new IP address, the container automatically updates the corresponding DNS record in Cloudflare using the API token you provided.
+
+The process looks like this:
+```
+Internet
+    ↓
+Cloudflare DNS
+    ↓
+Your Domain Name
+    ↓
+Cloudflare DDNS Container
+    ↓
+Cloudflare API
+    ↓
+Updated DNS Record
+    ↓
+Home Server
+```
+
+This allows your domain name to continue pointing to your home server, even when your public IP changes.
+
+One of the reasons I chose this approach is that it aligns with the rest of my Docker-based homelab. I can manage Cloudflare DDNS alongside my other containers using the same workflow and without relying on external scripts or cron jobs.
+
 ## Conclusion
-Running AdGuard Home in a Docker container inside a Linux VM on Proxmox gives you a robust, network-wide DNS-level ad-blocker. It’s lightweight, self-contained, and fully customizable, making it perfect for a homelab environment.
+Since I was already using Cloudflare to host my website's DNS, using Cloudflare DDNS was a natural extension of my existing setup.
 
-This setup allows me to:
-- Block ads and trackers across all devices
-- Manage DNS centrally
-- Easily maintain and update via Docker
-- Integrate with other homelab services like WireGuard and MeshCentral
+For anyone running a homelab with Docker, this is a simple project that improves the reliability and accessibility of self-hosted services while keeping everything managed from a single platform.
