@@ -1,7 +1,7 @@
 # Ajaya
-- [About Me](//localhost:1313/about/)
+- [About Me](/about/)
 
 ## Posts
-- [Setting Up Proxmox VE on an Old Dell OptiPlex](//localhost:1313/posts/setup-proxmox-on-a-pc/)
-- [AdGuard setup for blocking ads](//localhost:1313/posts/adguard-setup-on-homelab/)
-- [](//localhost:1313/posts/setting-up-wireguard-vpn/)
+- [Setting up wireguard vpn server with docker](/posts/setting-up-wireguard-vpn/)
+- [Setting Up Proxmox VE on an Old Dell OptiPlex](/posts/setup-proxmox-on-a-pc/)
+- [AdGuard setup for blocking ads](/posts/adguard-setup-on-homelab/)
