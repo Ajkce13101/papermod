@@ -95,7 +95,7 @@ Verify if it is running:
 docker ps
 ```
 You should see the wireguard container is listed
-![Image Description](/images/Pasted%20image%2020260611230948.png)
+
 
 
 ## Step 4: Retrieve Client Configurations
