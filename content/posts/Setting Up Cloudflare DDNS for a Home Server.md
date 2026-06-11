@@ -41,7 +41,7 @@ In Cloudflare:
 
 1. Navigate to **DNS**.
 2. Create an **A Record**.
-!![Image Description](/images/aRecord.png)
+![Image Description](/images/aRecord.png)
 The IP address is only temporary and will be updated automatically later.
 
 ## Step 2: Create a Cloudflare API Token
@@ -126,7 +126,8 @@ Verify that it is running:
 ```bash
 docker ps
 ```
-![[dockerpsddns.png|533]]
+![Image Description](/images/dockerpsddns.png)
+
 ## Step 4: Verify DNS Updates
 Check the container logs:
 ```bash
