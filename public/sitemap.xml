@@ -5,7 +5,19 @@
     <loc>/</loc>
     <lastmod>2026-06-11T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/cloudflare/</loc>
+    <lastmod>2026-06-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/docker/</loc>
+    <lastmod>2026-06-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/dynamic-dns/</loc>
+    <lastmod>2026-06-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/homelab/</loc>
+    <lastmod>2026-06-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/setting-up-cloudflare-ddns-for-a-home-server/</loc>
     <lastmod>2026-06-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/linux/</loc>
@@ -33,9 +45,6 @@
     <lastmod>2026-04-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/homelab/</loc>
-    <lastmod>2026-04-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/homelab/</loc>
     <lastmod>2026-04-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/proxmox/</loc>

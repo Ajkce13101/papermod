@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Dynamic Dns on Ajaya</title>
+    <link>/tags/dynamic-dns/</link>
+    <description>Recent content in Dynamic Dns on Ajaya</description>
+    <image>
+      <title>Ajaya</title>
+      <url>/images/papermod-cover.png</url>
+      <link>/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>2024 Ajaya K C. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 11 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/dynamic-dns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Got a Static Public Address for My Home Server Using Cloudflare DDNS</title>
+      <link>/posts/setting-up-cloudflare-ddns-for-a-home-server/</link>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>/posts/setting-up-cloudflare-ddns-for-a-home-server/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Most residential internet connection use a dynamic public IP address. This means that your ISP can change your public IP at any time, making it difficult to access self-hosted services consistently.&lt;/p&gt;
+&lt;p&gt;I already used Cloudflare to manage the DNS for my personal website, so when I needed a Dynamic DNS solution for my homelab, it made sense to use the tools I already had. Rather than paying my ISP for a static public IP or signing up for another DDNS provider, Cloudflare&amp;rsquo;s free API allowed me to keep my home server reachable through a permanent domain name. Whenever my home IP changes, a small script automatically updates the DNS record in Cloudflare.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

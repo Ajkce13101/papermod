@@ -1,6 +1,6 @@
 ---
 title: How I Got a Static Public Address for My Home Server Using Cloudflare DDNS
-date: 2026-06-12
+date: 2026-06-11
 draft: false
 tags:
   - homelab
