@@ -41,6 +41,9 @@
     <loc>/tags/dns/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/tags/docker/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/linux/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -48,6 +51,12 @@
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/setting-up-wireguard-vpn/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/vpn/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/wireguard/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/about/</loc>

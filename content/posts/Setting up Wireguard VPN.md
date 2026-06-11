@@ -3,11 +3,10 @@ title: Setting up wireguard vpn server with docker
 date: 2026-04-01
 draft: false
 tags:
-  - homelab
   - networking
-  - adguard
-  - dns
-  - proxmox
+  - wireguard
+  - vpn
+  - docker
   - linux
 ---
 ## Introduction
