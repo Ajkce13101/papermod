@@ -38,6 +38,9 @@
     <loc>/posts/adguard-setup-on-homelab/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/posts/setting-up-wireguard-vpn/</loc>
+    <lastmod>2026-04-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/dns/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -46,8 +49,6 @@
   </url><url>
     <loc>/tags/networking/</loc>
     <lastmod>2026-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/setting-up-wireguard-vpn/</loc>
   </url><url>
     <loc>/about/</loc>
   </url><url>

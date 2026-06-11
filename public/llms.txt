@@ -4,4 +4,4 @@
 ## Posts
 - [Setting Up Proxmox VE on an Old Dell OptiPlex](/posts/setup-proxmox-on-a-pc/)
 - [AdGuard setup for blocking ads](/posts/adguard-setup-on-homelab/)
-- [](/posts/setting-up-wireguard-vpn/)
+- [AdGuard setup for blocking ads](/posts/setting-up-wireguard-vpn/)
