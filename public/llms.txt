@@ -1,8 +1,8 @@
 # Ajaya
-- [About Me](/about/)
+- [About Me](//localhost:1313/about/)
 
 ## Posts
-- [How I Got a Static Public Address for My Home Server Using Cloudflare DDNS](/posts/setting-up-cloudflare-ddns-for-a-home-server/)
-- [Setting up wireguard vpn server with docker](/posts/setting-up-wireguard-vpn/)
-- [Setting Up Proxmox VE on an Old Dell OptiPlex](/posts/setup-proxmox-on-a-pc/)
-- [AdGuard setup for blocking ads](/posts/adguard-setup-on-homelab/)
+- [Setting up wireguard vpn server with docker](//localhost:1313/posts/setting-up-wireguard-vpn/)
+- [Setting Up Proxmox VE on an Old Dell OptiPlex](//localhost:1313/posts/setup-proxmox-on-a-pc/)
+- [AdGuard setup for blocking ads](//localhost:1313/posts/adguard-setup-on-homelab/)
+- [AdGuard setup for blocking ads](//localhost:1313/posts/setting-up-cloudflare-ddns-for-a-home-server/)
