@@ -123,33 +123,33 @@ try {
     exit 1
 }
 
-# Step 8: Push the public folder to the gh-pages branch using subtree split and force push
-Write-Host "Deploying to GitHub gh-pages..."
+# # Step 8: Push the public folder to the gh-pages branch using subtree split and force push
+# Write-Host "Deploying to GitHub gh-pages..."
 
-# Check if the temporary branch exists and delete it
-$branchExists = git branch --list "gh-pages"
-if ($branchExists) {
-    git branch -D gh-pages
-}
+# # Check if the temporary branch exists and delete it
+# $branchExists = git branch --list "gh-pages"
+# if ($branchExists) {
+#     git branch -D gh-pages
+# }
 
-# Perform subtree split
-try {
-    git subtree split --prefix public -b gh-pages
-} catch {
-    Write-Error "Subtree split failed."
-    exit 1
-}
+# # Perform subtree split
+# try {
+#     git subtree split --prefix public -b gh-pages
+# } catch {
+#     Write-Error "Subtree split failed."
+#     exit 1
+# }
 
-# Push to gh-pages branch with force
-try {
-    git push origin gh-pages:gh-pages --force
-} catch {
-    Write-Error "Failed to push to gh-pages branch."
-    git branch -D gh-pages
-    exit 1
-}
+# # Push to gh-pages branch with force
+# try {
+#     git push origin gh-pages:gh-pages --force
+# } catch {
+#     Write-Error "Failed to push to gh-pages branch."
+#     git branch -D gh-pages
+#     exit 1
+# }
 
-# Delete the temporary branch
-git branch -D gh-pages
+# # Delete the temporary branch
+# git branch -D gh-pages
 
 Write-Host "All done! Site synced, processed, committed, built, and deployed."

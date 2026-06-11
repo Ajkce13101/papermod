@@ -12,8 +12,27 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>2024 Ajaya K C. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 02 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up wireguard vpn server with docker</title>
+      <link>/posts/setting-up-wireguard-vpn/</link>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>/posts/setting-up-wireguard-vpn/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;WireGuard has quickly become one of the most popular VPN solutions thanks to its simplicity, speed, and modern cryptography. Running it inside Docker makes deployment and maintenance even easier.&lt;/p&gt;
+&lt;p&gt;In this guide, we&amp;rsquo;ll set up a WireGuard VPN server using Docker and Docker Compose.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;p&gt;Before you begin, ensure you have:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Linux server or VPS&lt;/li&gt;
+&lt;li&gt;Docker installed&lt;/li&gt;
+&lt;li&gt;Docker Compose installed&lt;/li&gt;
+&lt;li&gt;A public IP address or Dynamic DNS hostname&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can verify Docker is installed:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Setting Up Proxmox VE on an Old Dell OptiPlex</title>
       <link>/posts/setup-proxmox-on-a-pc/</link>
@@ -32,25 +51,6 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;why-adguard-home&#34;&gt;Why AdGuard Home?&lt;/h2&gt;
 &lt;p&gt;AdGuard Home is an open-source, self-hosted network-wide ad-blocker and DNS resolver. Its key benefits include:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Setting up wireguard vpn server with docker</title>
-      <link>/posts/setting-up-wireguard-vpn/</link>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>/posts/setting-up-wireguard-vpn/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;WireGuard has quickly become one of the most popular VPN solutions thanks to its simplicity, speed, and modern cryptography. Running it inside Docker makes deployment and maintenance even easier.&lt;/p&gt;
-&lt;p&gt;In this guide, we&amp;rsquo;ll set up a WireGuard VPN server using Docker and Docker Compose.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
-&lt;p&gt;Before you begin, ensure you have:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A Linux server or VPS&lt;/li&gt;
-&lt;li&gt;Docker installed&lt;/li&gt;
-&lt;li&gt;Docker Compose installed&lt;/li&gt;
-&lt;li&gt;A public IP address or Dynamic DNS hostname&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;You can verify Docker is installed:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

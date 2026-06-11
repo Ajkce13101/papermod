@@ -1,6 +1,6 @@
 ---
 title: Setting up wireguard vpn server with docker
-date: 2026-04-01
+date: 2026-06-11
 draft: false
 tags:
   - networking
