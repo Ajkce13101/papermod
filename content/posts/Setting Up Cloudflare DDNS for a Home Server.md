@@ -9,7 +9,7 @@ tags:
 
 ---
 ## Introduction
-Most residential internet connections use a dynamic public IP address. This means that your ISP can change your public IP at any time, making it difficult to access self-hosted services consistently.
+Most residential internet connection use a dynamic public IP address. This means that your ISP can change your public IP at any time, making it difficult to access self-hosted services consistently.
 
 I already used Cloudflare to manage the DNS for my personal website, so when I needed a Dynamic DNS solution for my homelab, it made sense to use the tools I already had. Rather than paying my ISP for a static public IP or signing up for another DDNS provider, Cloudflare's free API allowed me to keep my home server reachable through a permanent domain name. Whenever my home IP changes, a small script automatically updates the DNS record in Cloudflare.
 
