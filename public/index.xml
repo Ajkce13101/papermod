@@ -2,23 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Ajaya</title>
-    <link>//localhost:1313/</link>
+    <link>/</link>
     <description>Recent content on Ajaya</description>
     <image>
       <title>Ajaya</title>
-      <url>//localhost:1313/images/papermod-cover.png</url>
-      <link>//localhost:1313/images/papermod-cover.png</link>
+      <url>/images/papermod-cover.png</url>
+      <link>/images/papermod-cover.png</link>
     </image>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>2024 Ajaya K C. All rights reserved.</copyright>
     <lastBuildDate>Thu, 11 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Got a Static Public Address for My Home Server Using Cloudflare DDNS</title>
+      <link>/posts/setting-up-cloudflare-ddns-for-a-home-server/</link>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>/posts/setting-up-cloudflare-ddns-for-a-home-server/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Most residential internet connection use a dynamic public IP address. This means that your ISP can change your public IP at any time, making it difficult to access self-hosted services consistently.&lt;/p&gt;
+&lt;p&gt;I already used Cloudflare to manage the DNS for my personal website, so when I needed a Dynamic DNS solution for my homelab, it made sense to use the tools I already had. Rather than paying my ISP for a static public IP or signing up for another DDNS provider, Cloudflare&amp;rsquo;s free API allowed me to keep my home server reachable through a permanent domain name. Whenever my home IP changes, a small script automatically updates the DNS record in Cloudflare.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Setting up wireguard vpn server with docker</title>
-      <link>//localhost:1313/posts/setting-up-wireguard-vpn/</link>
+      <link>/posts/setting-up-wireguard-vpn/</link>
       <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/setting-up-wireguard-vpn/</guid>
+      <guid>/posts/setting-up-wireguard-vpn/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;WireGuard has quickly become one of the most popular VPN solutions thanks to its simplicity, speed, and modern cryptography. Running it inside Docker makes deployment and maintenance even easier.&lt;/p&gt;
 &lt;p&gt;In this guide, we&amp;rsquo;ll set up a WireGuard VPN server using Docker Compose.&lt;/p&gt;
@@ -35,16 +44,16 @@
     </item>
     <item>
       <title>Setting Up Proxmox VE on an Old Dell OptiPlex</title>
-      <link>//localhost:1313/posts/setup-proxmox-on-a-pc/</link>
+      <link>/posts/setup-proxmox-on-a-pc/</link>
       <pubDate>Thu, 02 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/setup-proxmox-on-a-pc/</guid>
+      <guid>/posts/setup-proxmox-on-a-pc/</guid>
       <description>A step-by-step guide on installing and configuring Proxmox VE on an old Dell OptiPlex to build a powerful homelab.</description>
     </item>
     <item>
       <title>AdGuard setup for blocking ads</title>
-      <link>//localhost:1313/posts/adguard-setup-on-homelab/</link>
+      <link>/posts/adguard-setup-on-homelab/</link>
       <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/adguard-setup-on-homelab/</guid>
+      <guid>/posts/adguard-setup-on-homelab/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this post, I will show how I deployed &lt;strong&gt;AdGuard Home&lt;/strong&gt; in my home lab environment to achieve network-wide ad-blocking and DNS-level filtering. My homelab runs on &lt;strong&gt;Proxmox&lt;/strong&gt;, with AdGuard Home inside a &lt;strong&gt;Docker container&lt;/strong&gt; on a Linux virtual machine.&lt;/p&gt;
 &lt;p&gt;This setup allows all devices on my network to benefit from ad-blocking, tracking protection, and enhanced DNS management without installing software individually on each device.&lt;/p&gt;
@@ -53,24 +62,10 @@
 &lt;p&gt;AdGuard Home is an open-source, self-hosted network-wide ad-blocker and DNS resolver. Its key benefits include:&lt;/p&gt;</description>
     </item>
     <item>
-      <title>AdGuard setup for blocking ads</title>
-      <link>//localhost:1313/posts/setting-up-cloudflare-ddns-for-a-home-server/</link>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/setting-up-cloudflare-ddns-for-a-home-server/</guid>
-      <description>&lt;p&gt;are&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;dynamic dns&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Most residential internet connection use a dynamic public IP address. This means that your ISP can change your public IP at any time, making it difficult to access self-hosted services consistently.&lt;/p&gt;
-&lt;p&gt;I already used Cloudflare to manage the DNS for my personal website, so when I needed a Dynamic DNS solution for my homelab, it made sense to use the tools I already had. Rather than paying my ISP for a static public IP or signing up for another DDNS provider, Cloudflare&amp;rsquo;s free API allowed me to keep my home server reachable through a permanent domain name. Whenever my home IP changes, a small script automatically updates the DNS record in Cloudflare.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>About Me</title>
-      <link>//localhost:1313/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/about/</guid>
+      <guid>/about/</guid>
       <description>&lt;h3 id=&#34;hi-there&#34;&gt;Hi there&lt;/h3&gt;
 &lt;p&gt;Hi, I’m Ajaya K C — an IT and networking enthusiast building and breaking things in my homelab.&lt;/p&gt;
 &lt;p&gt;This blog is where I document everything I learn: network setups, self-hosted services, Linux configs, firewalls, and anything else I experiment with.&lt;/p&gt;
